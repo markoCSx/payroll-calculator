@@ -21,6 +21,7 @@ public class ExerciseFive {
         //Declaring floating point variables
         double hoursWorked;
         double payRate;
+        double grossPay;
 
         //Collecting data for gross pay
         System.out.print("Hours worked this week: ");
@@ -28,6 +29,12 @@ public class ExerciseFive {
         System.out.print("Pay per hour: ");
         payRate = userInput.nextInt();
 
+        //Gross pay math
+        grossPay = hoursWorked * payRate;
+
+        //Displaying users name and gross pay
+        System.out.println("\n------ Employee Info ------");
+        System.out.printf("Employee name: %s %s\nGross pay: %.2f%n", firstName, lastName, grossPay);
 
         userInput.close();
     }
