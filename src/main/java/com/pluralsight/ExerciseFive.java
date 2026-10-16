@@ -22,6 +22,7 @@ public class ExerciseFive {
         double hoursWorked;
         double payRate;
         double grossPay;
+        double overtimePay;
 
         //Collecting data for gross pay
         System.out.print("Hours worked this week: ");
@@ -29,13 +30,21 @@ public class ExerciseFive {
         System.out.print("Pay per hour: ");
         payRate = userInput.nextInt();
 
+        //Overtime pay math
+        if (hoursWorked > 40) {
+            overtimePay = (hoursWorked - 40) * 1.5;
+        } else {
+            overtimePay = 0;
+        }
+
         //Gross pay math
-        grossPay = hoursWorked * payRate;
+        grossPay = (hoursWorked * payRate) + overtimePay;
 
         //Displaying users name and gross pay
         System.out.println("\n------ Employee Info ------");
         System.out.printf("Employee name: %s %s\nGross pay: %.2f%n", firstName, lastName, grossPay);
 
+        //Preventing resource leaking from Scanner
         userInput.close();
     }
 
