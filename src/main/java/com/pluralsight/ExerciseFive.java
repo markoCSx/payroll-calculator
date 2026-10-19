@@ -37,13 +37,13 @@ public class ExerciseFive {
     public static double getHoursWorked() {
         double hoursWorked;
         System.out.print("Hours worked this week: ");
-        return hoursWorked = userInput.nextInt();
+        return hoursWorked = userInput.nextDouble();
     }/*getHoursWorked END*/
 
     public static double getPayRate() {
         double payRate;
         System.out.print("Pay per hour: ");
-        return payRate = userInput.nextInt();
+        return payRate = userInput.nextDouble();
     }/*getPayRate END*/
 
     public static double getGrossPay(double hoursWorked, double payRate, double overTimePay) {
